@@ -1,0 +1,42 @@
+.banners {overflow:hidden;position:relative;height:350px;width:100%}
+.banners ul {list-style:none}
+.banners .leftArrow, .banners .rightArrow {z-index:2}
+.banners .images {height:100%;width:100%}
+.thumb>.images{width:80% !important; float:right;}
+
+.banners .images ul {height:100%;margin:0;padding:0}
+.banners .images li {position:relative;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat}
+.banners.contain .images li {background-size:contain}
+.banners.stretch .images li {background-size:100% 100%}
+.banners img {display:none}
+.banners span {display:none}
+.banners .link {position:absolute;top:0;left:0;right:0;bottom:0}
+.banners.image .bannerPages {display:none}
+
+.banners .bannerPages {position:absolute;text-align:center;padding:1em .8em;margin:0;z-index:2}
+.banners .bannerPages.bottom {right:0;bottom:0;left:0}
+.banners .bannerPages.top {top:0;right:0;left:0}
+.banners .bannerPages.left {text-align:left}
+.banners .bannerPages.right {text-align:right}
+.banners .bannerPages li {transition:all .2s;text-align:center;display:inline-block;width:2em;height:2em;line-height:2em;margin:0 .2em;cursor:pointer;background:#DDD;background:rgba(221,221,221,.7);color:#000}
+.banners .bannerPages li:hover {background:rgba(221,221,221,.85)}
+.banners .bannerPages li.activeImage {cursor:default;background:#DDD}
+.banners .bannerPages.dots li {color:transparent;border-radius:.3em;width:.6em;height:1.3em}
+.banners .thumb  {width: 20%;display: block !important;float: left;margin: 0;left: 0;padding: 0;}
+ul.thumb  {transition-property: -webkit-transform;transition-duration: 600ms;transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);transform: translate3d(0px, 0px, 0px);}
+
+.banners .bannerPages.thumb li {width: 60px;float: left;margin: 5px;height:auto !important;}
+.banners .thumb img{display:block}
+.banners .thumb li.activeImage {cursor:default;background:none;opacity: 0.5;}
+.banners.fade .images ul {position:relative}
+.banners.fade .images li {position:absolute;width:100%}
+.banners.fade.ready .images li {transition:all .5s}
+
+.banners.rotation .images {position:relative}
+.banners.rotation .images ul {width:10000%;position:absolute;left:0}
+.banners.rotation .images li {width:1%;float:left}
+.banners.rotation.ready .images ul {transition:all .5s}
+.banners .ShowText{display:none;}
+.thumb .bannerArrows {background: url(//website.bg/pub/images/arrow-left.png) no-repeat;width: 21px;height: 35px;float: left;}
+.thumb .leftArrow {transform: rotate(90deg); margin-right:15px;}
+.thumb .rightArrow {transform: rotate(-90deg);}

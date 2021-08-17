@@ -1,0 +1,96 @@
+.listLayout {list-style:none;display:table;width:100%;padding:0;margin:2% 1%}
+#content ul.listLayout {margin:0}
+.listLayout li {padding:1%;margin:1%;float:left;box-sizing:border-box;}
+.listLayout li:nth-child(2n) {width:100%!important;padding:0!important;margin:0!important;height:0!important;font-size:0!important;border:0 none;display:none}
+
+.listLayout.cols1 li {width:100%;margin:1% 0}
+
+.listLayout.cols2 li, .listLayout.cols2.AC li:nth-child(1), .listLayout.cols2.AC li:nth-child(3) {width:48%}
+.listLayout.cols2.AD li:nth-child(4n+2),.listLayout.cols2.AA li:nth-child(4n) {display:block}
+.listLayout.cols2.AC li, .listLayout.cols2.AD li:nth-child(1) {width:98%}
+.listLayout.cols2.AC li:nth-child(2) {display:none}
+/*.listLayout.cols2.AD li:nth-child(2n) {display:none}*/
+
+.listLayout.cols3 li, .listLayout.cols3.AC li:nth-child(1), .listLayout.cols3.AC li:nth-child(3), .listLayout.cols3.AC li:nth-child(5) {width:31.3%}
+.listLayout.cols3 li:nth-child(6n) {display:block}
+.listLayout.cols3.AC li, .listLayout.cols3.AD li:nth-child(1) {width:98%}
+.listLayout.cols3.AD li:nth-child(2n) {display:none}
+
+.listLayout.cols4 li, .listLayout.cols4.AC li:nth-child(1), .listLayout.cols4.AC li:nth-child(3), .listLayout.cols4.AC li:nth-child(5), .listLayout.cols4.AC li:nth-child(7) {width:23%}
+.listLayout.cols4 li:nth-child(8n) {display:block}
+.listLayout.cols4.AC li, .listLayout.cols4.AD li:nth-child(1) {width:98%}
+.listLayout.cols4.AD li:nth-child(2n) {display:none}
+
+@media screen and (max-width: 980px) {
+	.cols1on1024 .listLayout li {width:100%;margin:1% 0}
+	.cols1on1024 .listLayout li:nth-child(2n) {display:none}
+
+	.cols2on1024 .listLayout li, .cols2on1024 .listLayout.AC li:nth-child(1), .cols2on1024 .listLayout.AC li:nth-child(3) {width:48%}
+	.cols2on1024 .listLayout li:nth-child(2n) {display:none}
+	.cols2on1024 .listLayout.AD li:nth-child(4n+2), .cols2on1024 .listLayout.AA li:nth-child(4n) {display:block}
+	.cols2on1024 .listLayout.AC li, .cols2on1024 .listLayout.AD li:nth-child(1) {width:98%}
+	.cols2on1024 .listLayout.AC li:nth-child(2) {display:none}
+}
+
+
+
+@media screen and (max-width: 768px) {
+	.cols1on768 .listLayout li {width:100%;margin:1% 0}
+	.cols1on768 .listLayout li:nth-child(2n) {display:none}
+}
+
+@media screen and (max-width: 640px) {
+	.cols1on640 .listLayout li {width:100%;margin:1% 0}
+	.cols1on640 .listLayout li:nth-child(2n) {display:none}
+}
+
+@media screen and (max-width: 480px) {
+	.cols1on480 .listLayout li {width:100%;margin:1% 0}
+	.cols1on480 .listLayout li:nth-child(2n) {display:none}
+}
+
+
+
+.listLayout img {float:left;margin:2px 7px 7px 0;}
+.listLayout.AC img {max-width:15%}
+.listLayout.AB img {max-width:100%;clear:both}
+
+.listLayout.AB a {display:block;clear:both}
+
+.itemSummary p {display:none}
+.listLayout .itemSummary .itemDate {float:right; padding: 5% 0;}
+.listLayout .itemSummary .itemRead {float:right}
+
+.listLayout iframe, .listLayout input, .listLayout textarea, .listLayout select {display:none!important}
+.listLayout .itemSummary p {overflow:hidden}
+.listLayout .itemSummary p {display:block}
+.listLayout.summary0 .itemSummary p {display:none!important}
+.listLayout.summary1 .itemSummary p {height:1.5em}
+.listLayout.summary2 .itemSummary p {height:3em}
+.listLayout.summary3 .itemSummary p {height:4.5em}
+.listLayout.summary4 .itemSummary p {height:6em}
+.listLayout.summary5 .itemSummary p {height:7.5em}
+
+.catalogItem h2 {display:table;height:2.4em;width:100%}
+.catalogItem .productTitle a {vertical-align:middle;display:table-cell;line-height:1.2em}
+
+
+/*.listLayout h2 {font-size:14px}*/
+.listLayout .discounted .price {font-size:.9em;text-decoration:line-through;margin-right:1em}
+.listLayout .discountedPr {display:none}
+
+/*.publicationsItem .itemImage img {max-width:88px;max-height:120px}*/
+.catalogItem .itemImage img {width:100%}
+
+.catalogCategories ul {display:none;margin-left:1em}
+.catalogCategories ul.expanded {display:block}
+.orderingContainer {text-align:right}
+
+.lineClamp {line-height:1.5em;position:relative;display:block;display:-webkit-box!important;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;text-overflow:-o-ellipsis-lastline}
+.lineClamp:after {content:"";text-align:right;position:absolute;bottom:0;right:0;width:30%;height:1.2em;background:linear-gradient(to right,rgba(255, 255, 255, 0),rgba(255, 255, 255, 1) 50%)}
+@supports (-webkit-line-clamp: 3) {
+    .lineClamp:after {display:none}
+}
+
+li .attributes dt {float:left}
+li .attributes dt:after {content:':';margin-right:.5em}

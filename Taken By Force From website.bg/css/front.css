@@ -1,0 +1,185 @@
+article, section, aside, hgroup, nav, header, footer, figure, figcaption {display:block}
+* {box-sizing:border-box}
+body {font-size:10px;line-height:1.5em;font-family:Arial,Helvetica,sans-serif;margin:0}
+
+h1,h2,h3,h4,h5,h6 {line-height:1.25em}
+
+.pageWidth1024 .container, .container {max-width:980px;margin:auto}
+.pageWidth480 .container {max-width:480px}
+.pageWidth640 .container {max-width:640px}
+.pageWidth768 .container {max-width:768px}
+.pageWidth850 .container {max-width:850px}
+.pageWidth1280 .container {max-width:1250px}
+.pageWidth1920 .container {max-width:1900px}
+.pageWidthMax .container {max-width:100%}
+
+img {border:0 none;vertical-align:middle}
+.content img {max-width:100%}
+button {cursor:pointer}
+
+input[type='number'] {-moz-appearance:textfield}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance:none;margin:0;}
+
+header {padding:0;margin-bottom:2em;}
+.container header {padding:0 2% 2em 2%}
+footer {overflow: hidden;padding:.8em 0}
+.container footer {padding:.8em 2%}
+
+#languages {list-style:none}
+#languages li {display:inline-block}
+
+.content {padding:2em 2%;margin-bottom:2em;overflow:hidden}
+.content aside {display:none}
+.aside aside {display:block;float:left;width:20%;max-width:20%}
+.aside article, .aside .pagePath {margin-left:22%}
+
+.catalogCategories ul {display:none}
+.catalogCategories ul.expanded {display:block}
+
+.ellipsis {text-overflow:ellipsis;-o-text-overflow:ellipsis;white-space:nowrap;overflow:hidden;display:block}
+.lineClamp {position:relative;display:block;display:-webkit-box!important;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;text-overflow:-o-ellipsis-lastline}
+.lineClamp:after {content:"";text-align:right;position:absolute;bottom:0;right:0;width:30%;height:1.2em;background:linear-gradient(to right,rgba(255, 255, 255, 0),rgba(255, 255, 255, 1) 50%)}
+@supports (-webkit-line-clamp: 3) {
+    .lineClamp:after {display:none}
+}
+
+
+a {text-decoration:none;cursor:pointer}
+/* article a {text-decoration:underline} */
+
+
+/*header ul {margin:0;padding:0;list-style:none;overflow:hidden}*/
+/*header ul a, aside ul a {width:100%;display:inline-block}*/
+/*header .horizontal li {display:block;float:left}*/
+nav li a {display:block}
+nav ul {display:table;width:100%;margin:0;padding:0;list-style:none}
+nav li {display:table-cell}
+nav li span.floatLeft {display:block}
+nav li:first-child span.floatLeft {display:none}
+nav.vertical ul {display:block}
+nav.vertical li {display:list-item}
+nav.vertical li span.floatLeft {display:none}
+
+aside ul {margin:0;padding:0;list-style:none}
+aside ul ul {margin-left:.9em}
+aside ul a {padding:.9em;margin-bottom:.1em;display:inline-block}
+aside ul a.active {font-weight:bold}
+
+.slideshowheader {width:100%;height:350px}
+.slideshowheader img {width:100%}
+
+.floatRight {float:right}
+.floatLeft {float:left}
+.alignRight {text-align:right}
+.alignLeft {text-align:left}
+.rtl.floatRight {float:left}
+.rtl.floatLeft {float:right}
+.rtl.alignRight {text-align:left}
+.rtl.alignLeft {text-align:right}
+
+
+.noSelect {-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+
+
+@media print {
+	html body{background:none;font-size:initial}
+	header,footer,.noPrint,.banners{display:none}
+	.content.aside article{margin:0}
+	.container,.container800,.container1280{max-width:none!important}
+}
+
+
+.speedSlow .animateElement, .speedSlow .animate, .speedSlow .animate * {transition:.75s}
+.speedMedium .animateElement, .speedMedium .animate, .speedMedium .animate * {transition:.5s}
+.speedFast .animateElement, .speedFast .animate, .speedFast .animate * {transition:.25s}
+.delaySmall {transition-delay:.5s;}
+.delayMedium {transition-delay:.8s;}
+.delayBig {transition-delay:1.2s;}
+
+.expandElement {display:none;position:absolute;max-height:none!important;max-width:none!important}
+.collapse480,.collapse640,.collapse768,.collapse850,.collapse1024,.collapseAll,.shrinkHeight480,.shrinkHeight640,.shrinkHeight768,.shrinkHeight850,.shrinkHeight1024,.shrinkHeightAll,.shrinkWidth480,.shrinkWidth640,.shrinkWidth768,.shrinkWidth850,.shrinkWidth1024,.shrinkWidthAll {clear:both}
+@media screen and (max-width: 480px) {
+	.hide480 {display:none!important}
+	.collapse480:not(:hover) > * {display:none!important}
+	.shrinkHeight480:not(:hover) > *,.manualExpand .shrinkHeight480:not(.active) > * {max-height:0;overflow:hidden;box-shadow:none;border:0 none}
+	.shrinkWidth480:not(:hover) {max-width:0!important;overflow:hidden;box-shadow:none;border:0 none}
+	.collapse480 .expandElement,.shrinkHeight480 .expandElement,.shrinkWidth480 .expandElement {display:initial!important;max-height:none;max-width:none}
+	.collapse480:hover .expandElement.hideOnExpand {display:none!important}
+	.shrinkWidth480:hover .expandElement.hideOnExpand {max-width:0!important}
+	.shrinkHeight480:hover .expandElement.hideOnExpand {max-height:0!important}
+	.expand480 {display:block;margin:0;min-width:100%;max-width:100%;clear:both;float:none}
+}
+@media screen and (max-width: 640px) {
+	.hide640 {display:none!important}
+	.collapse640:not(:hover) > * {display:none!important}
+	.shrinkHeight640:not(:hover) > *,.manualExpand .shrinkHeight640:not(.active) > * {max-height:0;overflow:hidden;box-shadow:none;border:0 none}
+	.shrinkWidth640:not(:hover) {max-width:0!important;overflow:hidden;box-shadow:none;border:0 none}
+	.collapse640 .expandElement,.shrinkHeight640 .expandElement,.shrinkWidth640 .expandElement {display:initial!important;max-height:none;max-width:none}
+	.collapse640:hover .expandElement.hideOnExpand {display:none!important}
+	.shrinkWidth640:hover .expandElement.hideOnExpand {max-width:0!important}
+	.shrinkHeight640:hover .expandElement.hideOnExpand {max-height:0!important}
+	.expand640 {display:block;margin:0;min-width:100%;max-width:100%;clear:both;float:none}
+}
+@media screen and (max-width: 768px) {
+	.hide768 {display:none!important}
+	.collapse768:not(:hover) > * {display:none!important}
+	.shrinkHeight768:not(:hover) > *,.manualExpand .shrinkHeight768:not(.active) > * {max-height:0;overflow:hidden;box-shadow:none;border:0 none}
+	.shrinkWidth768:not(:hover) > *:not(.expandElement) {max-width:0!important;overflow:hidden;box-shadow:none;border:0 none}
+	.collapse768 .expandElement,.shrinkHeight768 .expandElement,.shrinkWidth768 .expandElement {display:initial!important;max-height:none;max-width:none}
+	.collapse768:hover .expandElement.hideOnExpand {display:none!important}
+	.shrinkWidth768:hover .expandElement.hideOnExpand {max-width:0!important}
+	.shrinkHeight768:hover .expandElement.hideOnExpand {max-height:0!important}
+	.expand768 {display:block;margin:0;min-width:100%;max-width:100%;clear:both;float:none}
+}
+@media screen and (max-width: 850px) {
+	.hide850 {display:none!important}
+	.collapse850:not(:hover) > * {display:none!important}
+	.shrinkHeight850:not(:hover) > *:not(.expandElement),.manualExpand .shrinkHeight850:not(.active) > * {max-height:0;overflow:hidden;box-shadow:none;border:0 none}
+	.shrinkWidth850:not(:hover) > *:not(.expandElement) {max-width:0!important;overflow:hidden;box-shadow:none;border:0 none}
+	.collapse850 .expandElement,.shrinkHeight850 .expandElement,.shrinkWidth850 .expandElement {display:block!important;max-height:none;max-width:none}
+	.collapse850:hover .expandElement.hideOnExpand {display:none!important}
+	.shrinkWidth850:hover .expandElement.hideOnExpand {max-width:0!important}
+	.shrinkHeight850:hover .expandElement.hideOnExpand {max-height:0!important}
+	.expand850 {display:block;margin:0;min-width:100%;max-width:100%;clear:both;float:none}
+}
+@media screen and (max-width: 980px) {
+	.hide1024 {display:none!important}
+	.collapse1024:not(:hover) > * {display:none!important}
+	.shrinkHeight1024:not(:hover) > *,.manualExpand .shrinkHeight1024:not(.active) > * {max-height:0;overflow:hidden;box-shadow:none;border:0 none}
+	.shrinkWidth1024:not(:hover) > *:not(.expandElement) {max-width:0!important;overflow:hidden;box-shadow:none;border:0 none}
+/*	.shrinkWidth1024:not(:hover) {max-width:0!important;overflow:hidden}*/
+	.collapse1024 .expandElement,.shrinkHeight1024 .expandElement,.shrinkWidth1024 .expandElement {display:initial!important;max-height:none;max-width:none}
+	.collapse1024:hover .expandElement.hideOnExpand {display:none!important}
+	.shrinkWidth1024:hover .expandElement.hideOnExpand {max-width:0!important}
+	.shrinkHeight1024:hover .expandElement.hideOnExpand {max-height:0!important}
+	.expand1024 {display:block;margin:0!important;min-width:100%;max-width:100%;clear:both;float:none;max-height:none}
+}
+@media screen and (min-width: 0) {
+	.hideAll {display:none!important}
+	.collapseAll:not(:hover) > * {display:none!important}
+	.shrinkHeightAll:not(:hover) > *,.manualExpand .shrinkHeightAll:not(.active) > * {max-height:0;overflow:hidden;box-shadow:none;border:0 none}
+	.shrinkWidthAll:not(:hover) > *:not(.expandElement) {max-width:0!important;overflow:hidden;box-shadow:none;border:0 none}
+	.collapseAll .expandElement,.shrinkHeightAll .expandElement,.shrinkWidthAll .expandElement {display:initial!important;max-height:none;max-width:none}
+	.collapseAll:hover .expandElement.hideOnExpand {display:none!important}
+	.shrinkWidthAll:hover .expandElement.hideOnExpand {max-width:0!important}
+	.shrinkHeightAll:hover .expandElement.hideOnExpand {max-height:0!important}
+	.expandAll {display:block;margin:0;min-width:100%;max-width:100%;clear:both;float:none;max-height:none}
+}
+/*hide  chechoutattributes*/
+.hideAtributes{display:none}
+/*leftsite menu*/
+.hover a{pointer-events: auto !important;}
+/*продуктов каталог писмо от Явор на 11.01.17*/
+@media screen and (max-width: 780px) {
+.path{margin-left:5%}
+}
+@media screen and (max-width: 640px) {
+ #CatalogSingleItem .banners{width:95% !important;}
+ .path{margin-left:10%}
+}
+.ln-clp-1{height: calc(1em * 1.5 * 1);}
+.ln-clp-2{height: calc(1em * 1.5 * 2);}
+.ln-clp-3{height: calc(1em * 1.5 * 3);}
+.ln-clp-4{height: calc(1em * 1.5 * 4);}
+.ln-clp-5{height: calc(1em * 1.5 * 5);}
+

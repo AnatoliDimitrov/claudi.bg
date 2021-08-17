@@ -1,0 +1,44 @@
+/* menu */
+nav *{transition: none !important;}
+nav.colsMenu{position: relative;} 
+//ul.menuWidget.expanded.level1 {display: none;}
+.menuWidget ul[class*="level"]:not(.level0) {display: none;}
+//li.active.itemMenu > ul.menuWidget.expanded.level1 {position: absolute;margin: 0 !important;list-style: none;width:290px;z-index: 99999;background-color: #dedede;}
+.menuWidget span.addPlus{display:none;}
+@media screen and (min-width: 851px){
+.menuWidget li.active.itemMenu:hover > ul.menuWidget.expanded.level1 {display: block !important;position: absolute;margin: 0 !important;list-style: none;width:290px;z-index: 99999;background-color: #dedede;}
+}
+ul.menuWidget.expanded.level1>li {position: relative;border: none;padding: 0 1em;display: list-item;width: 100%;}
+ul.menuWidget.expanded.level1>li a {border:none;text-align: left;}
+.menuWidget ul.level2 > li {float: left;display: block;width: inherit; margin-left: 10px;}
+.menuWidget li.cols2 > ul.level1, li.cols3 > ul.level1, .cols4 ul.level1, .cols5 ul.level1 {left: 0;position: absolute;width:100% !important;}
+.menuWidget ul.level1 >li {float: left; padding:0 !important;}
+.menuWidget .cols2 ul.level1 >li{width:48% !important;}
+.menuWidget .cols3 ul.level1 >li{width:32% !important;}
+.menuWidget .cols4 ul.level1 >li{width:25% !important;}
+.menuWidget .cols5 ul.level1 >li{width:20% !important;}
+
+.menuWidget li.isthidden {display:none;}
+.menuWidget  li.shresp {display:none !important;}
+@media screen and (max-width: 850px){
+.menuWidget  ul[class*="level"]:not(.level0){position: static; max-height: none; overflow: visible;float:left;}
+.menuWidget  li.shdecs {display:none !important;}
+.menuWidget  li.isthidden {display:block;}
+.menuWidget li.js{position: relative;}
+.menuWidget  li.shresp {display:block !important;}
+.menuWidget span.addPlus{position: absolute;width: 10px;top: 15px;right: 0;height: 10px;border: 1px solid #dedede;display: inline-table;padding: 0 5px;cursor: pointer;right: 20%;}
+ ul.menuWidget.expanded.level1{background:inherit !important;}
+  /*ul.menuWidget.expanded.level1>li {float: none;} */
+  ul.menuWidget.expanded.level2>li{padding:0 !important; margin-left:0 !important;}
+  ul.menuWidget.expanded.level3>li{padding:0 !important; margin-left:0 !important;}
+  ul.menuWidget.expanded.level4>li{padding:0 !important; margin-left:0 !important;}
+  ul.menuWidget.expanded.level5>li{padding:0 !important; margin-left:0 !important;}
+  ul.menuWidget.expanded.level6>li{padding:0 !important; margin-left:0 !important;}
+  li.active.itemMenu > ul.menuWidget.expanded.level1 {position: static;width:100%;}
+}
+@media screen and (max-width: 768px){
+.aside aside {
+    width: 0px !important;
+    display: none !important;
+}
+}
