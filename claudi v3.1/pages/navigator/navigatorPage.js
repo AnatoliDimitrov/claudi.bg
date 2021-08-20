@@ -1,12 +1,8 @@
-import authentication from "../../services/authentication.js";
 import navigatorTemplate from "./navigatorTemplate.js";
 
 
 function view(context, next) {
-    let isLogedIn = authentication.isLoggedIn();
-    let username = authentication.getUserName();
-    let path = context.pathname;
-    let html = navigatorTemplate.navTemplate(isLogedIn, username, path);
+    let html = navigatorTemplate.navTemplate();
     context.navigator(html);
     next();
 }
